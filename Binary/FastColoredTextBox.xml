@@ -837,6 +837,11 @@
             Indent of secondary wordwrap lines (in chars)
             </summary>
         </member>
+        <member name="P:FastColoredTextBoxNS.FastColoredTextBox.LimitText">
+            <summary>
+            Limit the number of characters the user is able to place in this control
+            </summary>
+        </member>
         <member name="P:FastColoredTextBoxNS.FastColoredTextBox.MacrosManager">
             <summary>
             MacrosManager records, stores and executes the macroses

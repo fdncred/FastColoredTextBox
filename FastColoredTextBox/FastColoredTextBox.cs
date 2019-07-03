@@ -270,6 +270,13 @@ namespace FastColoredTextBoxNS
         [Description("Indent of secondary wordwrap lines (in chars).")]
         public int WordWrapIndent { get; set; }
 
+        /// <summary>
+        /// Limit the number of characters the user is able to place in this control
+        /// </summary>
+        [DefaultValue(0)]
+        [Description("Limit the number of characters the user is able to place in this control.")]
+        public int LimitText { get; set; }
+
         MacrosManager macrosManager;
         /// <summary>
         /// MacrosManager records, stores and executes the macroses

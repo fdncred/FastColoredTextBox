@@ -294,6 +294,19 @@ namespace FastColoredTextBoxNS
 
         public virtual void OnTextChanging(ref string text)
         {
+            // Darren - Limit the number of characters. Eat everything over limit.
+            if (currentTB.LimitText > 0)
+            {
+                if (text?.Length > currentTB.LimitText)
+                {
+                    text = text.Substring(0, currentTB.LimitText);
+                }
+                else if (currentTB.TextLength + text?.Length > currentTB.LimitText)
+                {
+                    text = string.Empty;
+                }
+            }
+
             if (TextChanging != null)
             {
                 var args = new TextChangingEventArgs() { InsertingText = text };

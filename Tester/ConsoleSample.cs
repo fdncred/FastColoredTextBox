@@ -20,7 +20,7 @@ namespace Tester
         protected override void OnShown(EventArgs e)
         {
             base.OnShown(e);
-
+            consoleTextBox1.LimitText = 20;
             string text = "";
             stop = false;
             do
